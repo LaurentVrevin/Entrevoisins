@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#0287c3</color>
+    <color name="colorAccent">#FF80AB</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBackgroundStar">#FBFBFA</color>
+    <color name="colorBlack">#000000</color>
+    <color name="yellowStar">#FF8000</color>
+    <color name="pinkIcon">#FB42F8</color>
+
+</resources>
