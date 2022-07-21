@@ -49,7 +49,7 @@ public class DetailNeighbourActivity extends AppCompatActivity {
         TextView urlDetail = findViewById(R.id.urlDetail);
         TextView phoneNumberDetail = findViewById(R.id.phoneNumberDetail);
         TextView aProposDetail = findViewById(R.id.aProposDetail);
-        favoriButtonDetail = findViewById(R.id.favoriButtonDetail);
+        favoriButtonDetail = findViewById(R.id.floatingActionButtonDetail);
         backButton = findViewById(R.id.BackButton);
 
 /*chargement du profil concerné via la liste*/
