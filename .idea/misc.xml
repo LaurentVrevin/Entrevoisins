@@ -8,11 +8,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2365" />
+        <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.323" />
         <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/drawable/ic_delete_white_24dp.xml" value="0.323" />
+        <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2365" />
+        <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/drawable/ic_person_add_white_24dp.xml" value="0.2365" />
+        <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/drawable/ic_star_24dp.xml" value="0.323" />
+        <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/drawable/ic_star_border_white_24dp.xml" value="0.323" />
         <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/drawable/ic_star_white_24dp.xml" value="0.323" />
         <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/layout/activity_add_neighbour.xml" value="0.18" />
-        <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/layout/activity_detail_neighbour.xml" value="0.33" />
+        <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/layout/activity_detail_neighbour.xml" value="0.5" />
         <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/layout/activity_list_neighbour.xml" value="0.22010869565217392" />
+        <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/layout/fragment_favorite_neighbour_list.xml" value="0.31197916666666664" />
         <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/layout/fragment_list_neighbour.xml" value="0.22010869565217392" />
         <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/layout/fragment_neighbour.xml" value="0.33" />
         <entry key="..\:/COURS OPENCLASSROOMS/PROJET 03/Entrevoisins/app/src/main/res/layout/fragment_neighbour_list.xml" value="0.20871327254305977" />

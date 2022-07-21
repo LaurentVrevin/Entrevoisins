@@ -27,6 +27,7 @@ public class FavoriteNeighbourFragment extends Fragment {
     private RecyclerView mRecyclerView;
 
 
+
     /**
      * Create and return a new instance
      * @return @{@link FavoriteNeighbourFragment}
@@ -41,12 +42,13 @@ public class FavoriteNeighbourFragment extends Fragment {
         super.onCreate(savedInstanceState);
         mFavoriteApiService = DI.getNeighbourApiService();
 
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_neighbour_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_favorite_neighbour_list, container, false);
         Context context = view.getContext();
         mRecyclerView = (RecyclerView) view;
         mRecyclerView.setLayoutManager(new LinearLayoutManager(context));
@@ -58,7 +60,7 @@ public class FavoriteNeighbourFragment extends Fragment {
      * Init the List of neighbours
      */
     private void initList() {
-        mFavoriteNeighbours = mFavoriteApiService.getNeighbours();
+        mFavoriteNeighbours = mFavoriteApiService.getFavoriteNeighbours();
         mRecyclerView.setAdapter(new MyNeighbourRecyclerViewAdapter(mFavoriteNeighbours));
     }
 
@@ -83,7 +85,7 @@ public class FavoriteNeighbourFragment extends Fragment {
     /**
      * Fired if the user clicks on a delete button
      * @param event
-     */
+*/
     @Subscribe
     public void onDeleteNeighbour(DeleteNeighbourEvent event) {
         mFavoriteApiService.deleteNeighbour(event.neighbour);
