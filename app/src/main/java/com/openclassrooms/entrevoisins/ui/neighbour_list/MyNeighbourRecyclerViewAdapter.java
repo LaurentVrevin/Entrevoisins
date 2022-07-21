@@ -28,14 +28,18 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeighbourRecyclerViewAdapter.ViewHolder> {
+    /* je crée une clé afin de passer les informations de la vu dedans pour la récupérer dans l'activité détail */
     private final String DETAIL_NEIGHBOUR = "DETAIL_NEIGHBOUR";
 
 
     private final List<Neighbour> mNeighbours;
+    private final boolean isFavorite;
 
-    public MyNeighbourRecyclerViewAdapter(List<Neighbour> items) {
+    public MyNeighbourRecyclerViewAdapter(List<Neighbour> items, boolean isFavorite) {
         mNeighbours = items;
+        this.isFavorite = isFavorite;
     }
+
 
 
     /**création d'un ViewHolder.
@@ -60,13 +64,21 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
                 .load(neighbour.getAvatarUrl())
                 .apply(RequestOptions.circleCropTransform())
                 .into(holder.mNeighbourAvatar);
+        if (isFavorite)
+            holder.mDeleteButton.setVisibility(View.GONE);
+        else {
+            holder.mDeleteButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    EventBus.getDefault().post(new DeleteNeighbourEvent(neighbour));
+                }
+            });
 
-        holder.mDeleteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EventBus.getDefault().post(new DeleteNeighbourEvent(neighbour));
-            }
-        });
+        }
+
+        /** Je génère l'ouverture de l'activité Détail via le on click sur la view
+         *
+         */
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

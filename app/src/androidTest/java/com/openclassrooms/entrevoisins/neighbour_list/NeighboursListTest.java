@@ -5,6 +5,7 @@ import android.support.test.espresso.contrib.RecyclerViewActions;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
+import android.util.Log;
 
 import com.openclassrooms.entrevoisins.R;
 import com.openclassrooms.entrevoisins.ui.neighbour_list.ListNeighbourActivity;
@@ -51,8 +52,8 @@ public class NeighboursListTest {
     @Test
     public void myNeighboursList_shouldNotBeEmpty() {
         // First scroll to the position that needs to be matched and click on it.
-        onView(ViewMatchers.withId(R.id.list_neighbours))
-                .check(matches(hasMinimumChildCount(1)));
+        onView(ViewMatchers.withId(R.id.list_neighbours)) //va rechercher le layout qui a pour id ListNeighbours
+                .check(matches(hasMinimumChildCount(1))); //vérifie s'il y a au moins 1 item
     }
 
     /**
@@ -68,4 +69,10 @@ public class NeighboursListTest {
         // Then : the number of element is 11
         onView(ViewMatchers.withId(R.id.list_neighbours)).check(withItemCount(ITEMS_COUNT-1));
     }
+    @Test
+    public void myNeighbourgsDetailActivity_Openning(){}
+    @Test
+    public void myNeighbourgsDetailActivity_UserName_IsNotEmpty(){}
+    @Test
+    public void myFavoritList_TabLayout_isFavorited (){}
 }
