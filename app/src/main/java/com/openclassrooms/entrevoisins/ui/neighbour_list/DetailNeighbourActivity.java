@@ -26,7 +26,7 @@ import butterknife.OnClick;
 
 
 public class DetailNeighbourActivity extends AppCompatActivity {
-//    String profilNameDetail, detailAvatar, firstNameDetail,addressNumberDetail,phoneNumberDetail,urlDetail,aProposDetail;
+
     private Neighbour neighbour;
     private NeighbourApiService mApiService;
     private FloatingActionButton favoriButtonDetail;
