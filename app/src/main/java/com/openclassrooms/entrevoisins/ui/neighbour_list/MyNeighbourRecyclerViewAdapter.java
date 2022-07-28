@@ -64,6 +64,7 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
                 .load(neighbour.getAvatarUrl())
                 .apply(RequestOptions.circleCropTransform())
                 .into(holder.mNeighbourAvatar);
+        //S'il est favorite alors enlève la visibilité du bouton supprimer
         if (isFavorite)
             holder.mDeleteButton.setVisibility(View.GONE);
         else {
