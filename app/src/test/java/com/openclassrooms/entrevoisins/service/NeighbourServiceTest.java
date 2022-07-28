@@ -28,9 +28,11 @@ public class NeighbourServiceTest {
     }
 
     @Test
+    //Récupère les Neighbours avec succes
     public void getNeighboursWithSuccess() {
         List<Neighbour> neighbours = service.getNeighbours();
         List<Neighbour> expectedNeighbours = DummyNeighbourGenerator.DUMMY_NEIGHBOURS;
+        //assertThat = Check ça
         assertThat(neighbours, IsIterableContainingInAnyOrder.containsInAnyOrder(expectedNeighbours.toArray()));
     }
 
@@ -40,16 +42,6 @@ public class NeighbourServiceTest {
         service.deleteNeighbour(neighbourToDelete);
         assertFalse(service.getNeighbours().contains(neighbourToDelete));
     }
-    @Test
-    public void addFavoriteNeighbourWithSuccess() {}
 
-    @Test
-    public void deleteFavoriteNeighbourWithSuccess() {}
-
-    @Test
-    public void getFavoriteNeighboursWithSuccess(){}
-
-    @Test
-    public void IsFavoriteNeighbourWithSuccess(){}
 
 }
