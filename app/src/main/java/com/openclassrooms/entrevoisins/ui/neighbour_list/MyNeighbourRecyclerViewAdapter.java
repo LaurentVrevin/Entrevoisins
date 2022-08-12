@@ -3,8 +3,6 @@ package com.openclassrooms.entrevoisins.ui.neighbour_list;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
-import android.support.v7.view.menu.MenuView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +19,6 @@ import com.openclassrooms.entrevoisins.model.Neighbour;
 
 import org.greenrobot.eventbus.EventBus;
 
-import java.io.Serializable;
 import java.util.List;
 
 import butterknife.BindView;
@@ -41,8 +38,8 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
     }
 
 
-
-    /**création d'un ViewHolder.
+    /**
+     * création d'un ViewHolder.
      * Le ViewHolder contient les éléments qui composent un élément de la liste
      */
     @Override
@@ -52,7 +49,8 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
         return new ViewHolder(view);
     }
 
-    /** onBindViewHolder permet de lier les éléments de la ViewHolder
+    /**
+     * onBindViewHolder permet de lier les éléments de la ViewHolder
      * à leurs valeurs dans la base de données
      * Le voisin est récupéré grâce à la position de la ViewHolder dans l'adapter
      */
@@ -90,9 +88,10 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
                 /**la méthode getContext utilise le propre context de l'activité
                  * et non pas de l'application comme pour getcontextapplication()
                  */
-                }
+            }
         });
     }
+
     /* getItemCount() renvoi le nbre d'éléments total à afficher */
     @Override
     public int getItemCount() {

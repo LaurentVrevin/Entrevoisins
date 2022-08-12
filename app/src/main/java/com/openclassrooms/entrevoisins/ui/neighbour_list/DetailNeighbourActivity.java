@@ -21,7 +21,6 @@ public class DetailNeighbourActivity extends AppCompatActivity {
     private Neighbour neighbour;
     private NeighbourApiService mApiService;
     private FloatingActionButton favoritButtonDetail;
-    private ImageButton backButton;
     boolean isFavorite;
 
     @Override
@@ -40,7 +39,7 @@ public class DetailNeighbourActivity extends AppCompatActivity {
         TextView phoneNumberDetail = findViewById(R.id.phoneNumberDetail);
         TextView aProposDetail = findViewById(R.id.aProposDetail);
         favoritButtonDetail = findViewById(R.id.floatingActionButtonDetail);
-        backButton = findViewById(R.id.BackButton);
+        ImageButton backButton = findViewById(R.id.BackButton);
         if (isFavorite) {
             favoritButtonDetail.setImageResource(R.drawable.ic_star_white_24dp);
         }
@@ -60,30 +59,22 @@ public class DetailNeighbourActivity extends AppCompatActivity {
                 .into(photoDetail);
 
         /*Click sur le bouton pour retour en arrière */
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DetailNeighbourActivity.this.finish();
-            }
-        });
+        backButton.setOnClickListener(v -> DetailNeighbourActivity.this.finish());
         /*Changement d'icône en cliquant sur le bouton favori */
-        favoritButtonDetail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        favoritButtonDetail.setOnClickListener(v -> {
 
-                if (!isFavorite) {
-                    mApiService.addFavoriteNeighbour(neighbour);
-                    favoritButtonDetail.setImageResource(R.drawable.ic_star_white_24dp);
-                    Toast.makeText(DetailNeighbourActivity.this, "Vous avez ajouté " + neighbour.getName() + " à vos favoris", Toast.LENGTH_SHORT).show();
+            if (!isFavorite) {
+                mApiService.addFavoriteNeighbour(neighbour);
+                favoritButtonDetail.setImageResource(R.drawable.ic_star_white_24dp);
+                Toast.makeText(DetailNeighbourActivity.this, "Vous avez ajouté " + neighbour.getName() + " à vos favoris", Toast.LENGTH_SHORT).show();
 
-                } else {
-                    mApiService.deleteFavoriteNeighbour(neighbour);
-                    favoritButtonDetail.setImageResource(R.drawable.ic_star_border_white_24dp);
-                    Toast.makeText(DetailNeighbourActivity.this, "Vous avez supprimé " + neighbour.getName() + " de vos favoris", Toast.LENGTH_SHORT).show();
+            } else {
+                mApiService.deleteFavoriteNeighbour(neighbour);
+                favoritButtonDetail.setImageResource(R.drawable.ic_star_border_white_24dp);
+                Toast.makeText(DetailNeighbourActivity.this, "Vous avez supprimé " + neighbour.getName() + " de vos favoris", Toast.LENGTH_SHORT).show();
 
-                }
-                isFavorite = !isFavorite;
             }
+            isFavorite = !isFavorite;
         });
     }
 }
